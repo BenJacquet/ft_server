@@ -1,4 +1,4 @@
 1. Blabla
-    1. Bla
-    2. Bla
+    * Bla
+    * Bla
 2. Test
