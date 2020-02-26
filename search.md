@@ -17,6 +17,7 @@
         * Redirige le traffic vers l'IP du container sur le port 80
         * **--detach** permet de detacher le container du terminal afin de pouvoir lancer d'autres commandes
         * **--name** permet de nommer le container (ici il porte le nom webhost)
+        * L'option **--link** permet de lier un container a un autre afin qu'ils puissent commmuniquer entre eux (ex. **--link wordpress:mysql**)
     * **docker container ls -a**
         * Liste les containers en cours, stoppes, en pause
     * **docker container logs webhost**
@@ -26,4 +27,6 @@
     * **docker container rm webhost**
         * Supprime le ou les containers en question (nom ou id du container)
         * L'option **-f** peut etre utilisee pour forcer la suppression d'un container actif
+    * **docker images**
+        * Affiche les images disponibles en local
     
