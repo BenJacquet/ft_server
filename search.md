@@ -1,4 +1,4 @@
-1. __**Que sont les containers et les machines virtuelles**__
+1. Que sont les containers et les machines virtuelles
     * Machine virtuelle
         * Une machine virtuelle sert a recréer un **OS** dans un systeme hote.
         * Elle est completement isolee du systeme hote et fonctionne donc avec une quantité determinee en amont de ressources.
@@ -9,21 +9,21 @@
         * Un container est un ou plusieurs **processus** isole du systeme, du coup il a l'avantage d'etre bien plus leger qu'une machine virtuelle
      * Comparaison visuelle
         ![Visual](https://user.oc-static.com/upload/2019/05/13/15577645779374_vm-vs-conteneur.png)
-* __**Commandes**__
-    * __**docker container run --publish 80:80 --detach --name webhost nginx**__
-        * Telecharge l'image __**nginx**__ depuis Docker Hub
+* **Commandes**
+    * **docker container run --publish 80:80 --detach --name webhost nginx**
+        * Telecharge l'image __nginx__ depuis Docker Hub
         * Demarre un container depuis cette image
-        * __**--publish**__ ouvre le port 80 sur l'adresse IP de l'hote
+        * **--publish** ouvre le port 80 sur l'adresse IP de l'hote
         * Redirige le traffic vers l'IP du container sur le port 80
-        * __**--detach**__ permet de detacher le container du terminal afin de pouvoir lancer d'autres commandes
-        * __**--name**__ permet de nommer le container (ici il porte le nom webhost)
-    * __**docker container ls -a**__
+        * **--detach** permet de detacher le container du terminal afin de pouvoir lancer d'autres commandes
+        * **--name** permet de nommer le container (ici il porte le nom webhost)
+    * **docker container ls -a**
         * Liste les containers en cours, stoppes, en pause
-    * __**docker container logs webhost**__
+    * **docker container logs webhost**
         * Affiche le log du container en question (ici webhost)
-    * __**docker container top webhost**__
+    * **docker container top webhost**
         * Affiche la liste des processus en cours dans le container (ici webhost)
-    * __**docker container rm webhost**__
+    * **docker container rm webhost**
         * Supprime le ou les containers en question (nom ou id du container)
-        * L'option __**-f**__ peut etre utilisee pour forcer la suppression d'un container actif
+        * L'option **-f** peut etre utilisee pour forcer la suppression d'un container actif
     
