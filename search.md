@@ -15,8 +15,16 @@
     * A quoi sert ce fichier ?
         Un Dockerfile contient toutes les informations et instructions necessaires au build d'une image Docker.
     * Que contient il ?
-        
-        ![Dockerfile](https://i.imgur.com/nb8J02I.png)
+    ```Dockerfile
+        #Cette image aura pour image de base l'OS Debian, buster est la version 10 de debian
+        FROM debian:buster
+
+        #Recherche de mise a jour disponibles
+        RUN apt-get update
+
+        #Commande qui sera executee au lancement du container
+        CMD ["echo", "Test, ce dockerfile est fonctionnel et la commande est executee"]
+    ```
 
 3. **Commandes**
     * **docker container run --publish 80:80 --detach --name webhost nginx**
@@ -43,5 +51,5 @@
         * **-t _NOM DE L'IMAGE_** permet de specifier un nom pour l'image creee
 
 4. **Cheat Sheet**
-    (https://github.com/wsargent/docker-cheat-sheet#dockerfile)
+    * (https://github.com/wsargent/docker-cheat-sheet#dockerfile)
 
