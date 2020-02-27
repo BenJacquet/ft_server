@@ -35,4 +35,4 @@
     * A quoi sert ce fichier ?
         Un Dockerfile contient toutes les informations et instructions necessaires au build d'une image Docker.
     * Que contient il ?
-        ![Dockerfile](https://imgur.com/nb8J02I)
+        ![Dockerfile](https://i.imgur.com/nb8J02I.png)
