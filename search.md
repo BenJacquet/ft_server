@@ -34,7 +34,8 @@
         * Redirige le traffic vers l'IP du container sur le port 80
         * **--detach** permet de detacher le container du terminal afin de pouvoir lancer d'autres commandes
         * **--name** permet de nommer le container (ici il porte le nom webhost)
-        * L'option **--link** permet de lier un container a un autre afin qu'ils puissent commmuniquer entre eux (ex. **--link wordpress:mysql**)
+        * **--link** permet de lier un container a un autre afin qu'ils puissent commmuniquer entre eux (ex. **--link wordpress:mysql**)
+        * **-it** permet de lancer le container en mode interactif, on pourra y executer des commaandes comme en tty
     * **docker container ls -a**
         * Liste les containers en cours, stoppes, en pause
     * **docker container logs webhost**
@@ -54,31 +55,31 @@
     * Determiner l'image de base
     * Copier les fichier necessaires au fonctionnement des differents containers (nginx, wordpress.zip, wordpress.sql, sql)
     * Copier un script permettant de mettre en relation chaque container
-        # INSTALLATION ET MISE A JOUR
-        * installer wget, nginx, mariadb-server, php, php-cli, php-fpm, php-cgi, php-mysql, php-mbstring, oppenssl, zip
-        # SETUP WORDPRESS
-        * unzip l'archive contenant le site wordpress
-        # SUPPRESSION D'APACHE2
-        * apt-get purge apache2 qui est inutile ici
-        # SETUP SQL
-        * demarrer le service mysql
-        * donner "init.sql" en argument a mysql
-        * creer l'utilisateur avec les droits admin pour le wordpress (options -u pour l'utilisateur, -p pour le mot de passe) en envoyant la base de donnee en argument wordpress.sql
-        # LIEN ENTRE LOCALHOST ET LES SITES ACTIFS
-        * creer un lien symbolique entre "/sites-avalable/localhost" et "/sites-enables/"
-        * modification du proprietaire de toute l'arborescence /var/www/* (chown -R)
-        * modification des droits pour toute l'arborescence de /var/www (rwx.r-x.r-x)
-        # SETUP PHP
-        * **/etc/init.d/php7.3-fpm start**
-        # SETUP SSL
-        * Creer dossier contenant mkcert
-        * Telecharger mkcert avec wget depuis github.com/FiloSottile/mkcert/releases/download/v1.1.2/mkcert-v1.1.2-linux-amd64
-        * Editer les droits pour pouvoir executer mkcert
-        * installer mkcert **mkcert -install**
-        * **mkcert localhost**
-        # DEMARRAGE DU SERVEUR
-        * demarrage du service nginx (**service nginx start**)
-    * Lancer le script en question
+        * INSTALLATION ET MISE A JOUR
+            * installer wget, nginx, mariadb-server, php, php-cli, php-fpm, php-cgi, php-mysql, php-mbstring, oppenssl, zip
+        * SETUP WORDPRESS
+            * unzip l'archive contenant le site wordpress
+        * SUPPRESSION D'APACHE2
+            * **apt-get purge apache2** qui est inutile ici
+        * SETUP SQL
+            * Demarrer le service mysql
+            * Donner "init.sql" en argument a mysql (qui contient l'instruction pour creer la database, donner les droits admin a l'utilisateur specifie, un flush et une mise a jour du compte)
+            * Creer l'utilisateur avec les droits admin pour le wordpress (options -u pour l'utilisateur, -p pour le mot de passe) en envoyant la base de donnee en argument wordpress.sql
+        * LIEN ENTRE LOCALHOST ET LES SITES ACTIFS
+            * Creer un lien symbolique entre "/sites-avalable/localhost" et "/sites-enables/"
+            * Modification du proprietaire de toute l'arborescence /var/www/* (chown -R)
+            * Modification des droits pour toute l'arborescence de /var/www (rwx.r-x.r-x)
+        * SETUP PHP
+            * **/etc/init.d/php7.3-fpm start**
+        * SETUP SSL
+            * Creer dossier contenant mkcert
+            * Telecharger mkcert avec wget depuis github.com/FiloSottile/mkcert/releases/download/v1.1.2/mkcert-v1.1.2-linux-amd64
+            * Editer les droits pour pouvoir executer mkcert
+            * Installer mkcert **mkcert -install**
+            * Lancement du ssl sur localhost **mkcert localhost**
+        * DEMARRAGE DU SERVEUR
+            * Demarrage du service nginx (**service nginx start**)
+            * Lancer le script en question
 
 * **Infos utiles**
     * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
@@ -87,3 +88,5 @@
     * [Operateurs en Shell (ici la redirection)](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators)
     * [Guide pour la commande apt-get](https://doc.ubuntu-fr.org/apt-get)
     * [Utiliser SSL grace a mkcert](https://github.com/FiloSottile/mkcert)
+    * [Utiliser wget](https://doc.ubuntu-fr.org/wget)
+    * [Nginx cheat sheet](https://github.com/SimulatedGREG/nginx-cheatsheet)
