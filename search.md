@@ -51,5 +51,5 @@
         * **-t _NOM DE L'IMAGE_** permet de specifier un nom pour l'image creee
 
 4. **Cheat Sheet**
-    * (https://github.com/wsargent/docker-cheat-sheet#dockerfile)
+    * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
 
