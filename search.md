@@ -8,9 +8,17 @@
     * Container
         * Un container est un ou plusieurs **processus** isole du systeme, du coup il a l'avantage d'etre bien plus leger qu'une machine virtuelle
      * Comparaison visuelle
+
         ![Visual](https://user.oc-static.com/upload/2019/05/13/15577645779374_vm-vs-conteneur.png)
 
-* **Commandes**
+2. **Dockerfile**
+    * A quoi sert ce fichier ?
+        Un Dockerfile contient toutes les informations et instructions necessaires au build d'une image Docker.
+    * Que contient il ?
+        
+        ![Dockerfile](https://i.imgur.com/nb8J02I.png)
+
+3. **Commandes**
     * **docker container run --publish 80:80 --detach --name webhost nginx**
         * Telecharge l'image **nginx** depuis Docker Hub
         * Demarre un container depuis cette image
@@ -30,10 +38,10 @@
         * L'option **-f** peut etre utilisee pour forcer la suppression d'un container actif
     * **docker images**
         * Affiche les images disponibles en local
+    * **docker build _CHEMIN DU REPERTOIRE CONTENANT LE DOCKERFILE_**
+        * Permet de creer une image en se servant du Dockerfile present dans le repertoire specifie (un point si il s'agit du repertoire courant)
+        * **-t _NOM DE L'IMAGE_** permet de specifier un nom pour l'image creee
 
-* **Dockerfile**
-    * A quoi sert ce fichier ?
-        Un Dockerfile contient toutes les informations et instructions necessaires au build d'une image Docker.
-    * Que contient il ?
-        
-        ![Dockerfile](https://i.imgur.com/nb8J02I.png)
+4. **Cheat Sheet**
+    (https://github.com/wsargent/docker-cheat-sheet#dockerfile)
+

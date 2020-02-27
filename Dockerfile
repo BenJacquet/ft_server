@@ -5,4 +5,4 @@ FROM debian:buster
 RUN apt-get update
 
 #Commande qui sera executee au lancement du container
-CMD ["echo", "Test, ce dockerfile est fonctionnel et la commande s'est execute"]
+CMD ["echo", "Test, ce dockerfile est fonctionnel et la commande est executee"]
