@@ -81,6 +81,20 @@
             * Demarrage du service nginx (**service nginx start**)
             * Lancer le script en question
 
+* **Lexique**
+    * URI = **Uniform Resource Identifier** : Chaine de caractere permettant d'indentifier une ressource faisant partie d'un reseau, elle peut etre une URL ou un URN
+    * URL = **Uniform Resource Locator** : URI qui fournit les moyens d'agir sur et d'acceder a une ressource ou d'afficher une representation de cette ressource
+    * URN = **Uniform Resource Name** : URI qui permet d'indentifier une ressource dans un espace de noms(**namespace**) sans pour autant avoir son emplacement
+    * XML Namespace = Fichier permettant de stocker differents noms et attributs dans un fichier XML, cela permet de dissocier des elements homonymes (Rec. W3C)
+    * W3C = **WWW Consortium** : Organisme de standardisation fonde afin de promouvoir la compatibilite des differentes technologies necessaires au Web
+    * CGI = **Common Gateway Interface** : Protocole devenu un standard industriel indiquant comment transmettre l'output d'un programme depuis le serveur HTTP vers le client au lieu d'envoyer le programme entier
+    * CLI = **Command Line Instruction** : Interface permettant a un utilisateur d'interagir avec une machine via des lignes de commandes (ex. un terminal)
+    * FPM = **FastCGI Process Manager** : Interface SAPI permettant la communication entre un serveur Web et PHP
+    * FastCGI = Protocole evolution de CGI permettant de gerer des serveurs differents de celui gerant le serveur HTTP
+    * SAPI = **Server Application Programming Interface** : Interface de programmation des applications serveurs web (comme Apache Nginx etc.)
+    * Daemon = Programme ou ensemble de processus qui s'execute en arriere plan, il genere un processus enfant puis meurt, etant ensuite adopte par le processus parent du daemon (fork off and die)
+    * MBString = **Multi-Byte String** : 
+
 * **Infos utiles**
     * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
     * [MySQL Cheat Sheet](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
@@ -89,4 +103,6 @@
     * [Guide pour la commande apt-get](https://doc.ubuntu-fr.org/apt-get)
     * [Utiliser SSL grace a mkcert](https://github.com/FiloSottile/mkcert)
     * [Utiliser wget](https://doc.ubuntu-fr.org/wget)
+    * [Installation PHP](https://www.php.net/manual/fr/install.php)
     * [Nginx cheat sheet](https://github.com/SimulatedGREG/nginx-cheatsheet)
+    * [URI-Wikipedia](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier)
