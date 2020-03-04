@@ -93,10 +93,11 @@
     * FastCGI = Protocole evolution de CGI permettant de gerer des serveurs differents de celui gerant le serveur HTTP
     * SAPI = **Server Application Programming Interface** : Interface de programmation des applications serveurs web (comme Apache Nginx etc.)
     * Daemon = Programme ou ensemble de processus qui s'execute en arriere plan, il genere un processus enfant puis meurt, etant ensuite adopte par le processus parent du daemon (fork off and die)
-    * MBString = **Multi-Byte String** : Extension de PHP permettant de gerer des chaines de caracteres utilisant plusieurs octets (contrairement a l'ASCII qui est encode sur 1 octet) 
+    * MBString = **Multi-Byte String** : Extension de PHP permettant de gerer des chaines de caracteres utilisant plusieurs octets (contrairement a l'ASCII qui est encode sur 1 octet)
 
 * **Infos utiles**
     * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
+    * [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
     * [MySQL Cheat Sheet](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
     * [Gestion des droits et proprietaires sur des fichiers](https://www.hostinger.fr/tutoriels/chmod-chown-linux/)
     * [Operateurs en Shell (ici la redirection)](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators)
