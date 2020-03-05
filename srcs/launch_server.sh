@@ -10,13 +10,19 @@ apt-get install -y php-cgi
 apt-get install -y php-mysql
 apt-get install -y php-mbstring
 apt-get install -y openssl
+apt-get install -y vim
+apt-get install -y zip
 apt-get purge -y apache2
+
+# Extraction des fichiers
+
+unzip config_files.zip -d /
 
 # Demarrage de MySQL
 
 service mysql start
-mysql < /var/www/initialize_db.sql
-mysql wordpress -u root --password= < /var/www/wordpress_db.sql
+mysql < /var/www/wordpress/initialize_db.sql
+mysql wordpress -u root --password= < /var/www/wordpress/wordpress_db.sql
 
 # Activation du site localhost dans nginx
 
@@ -28,12 +34,12 @@ chown -R www-data:www-data /var/www/*
 chmod -R 755 /var/www/*
 
 # Lancement de PHP
-/etc/init.d/php-fpm7.3 start
+/etc/init.d/./php7.3-fpm start
 
 # Installation de SSL sur localhost (mkcert)
 
-/config_files/./mkcert-v1.1.2-linux-amd64 -install
-/config_files/./mkcert-v1.1.2-linux-amd64 localhost
+/root/./mkcert-v1.1.2-linux-amd64 -install
+/root/./mkcert-v1.1.2-linux-amd64 localhost
 
 # Demarrage de Nginx
 
