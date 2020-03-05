@@ -100,6 +100,7 @@
     * [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
     * [MySQL Cheat Sheet](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
     * [Gestion des droits et proprietaires sur des fichiers](https://www.hostinger.fr/tutoriels/chmod-chown-linux/)
+    * [Guide Installation Wordpress](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lemp-nginx-mariadb-and-php-on-debian-10)
     * [Operateurs en Shell (ici la redirection)](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators)
     * [Guide pour la commande apt-get](https://doc.ubuntu-fr.org/apt-get)
     * [Utiliser SSL grace a mkcert](https://github.com/FiloSottile/mkcert)
