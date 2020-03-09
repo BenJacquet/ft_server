@@ -97,6 +97,7 @@
 
 * **Infos utiles**
     * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
+    * [Docker Build Documentation](https://docs.docker.com/engine/reference/builder/)
     * [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
     * [MySQL Cheat Sheet](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
     * [Nginx Astuces et Config](https://www.microlinux.fr/decouvrir-nginx-2/)
