@@ -97,10 +97,8 @@
 
 * **Infos utiles**
     * [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet#dockerfile)
-    * [Docker Build Documentation](https://docs.docker.com/engine/reference/builder/)
     * [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
     * [MySQL Cheat Sheet](https://www.mysqltutorial.org/mysql-cheat-sheet.aspx)
-    * [Nginx Astuces et Config](https://www.microlinux.fr/decouvrir-nginx-2/)
     * [Gestion des droits et proprietaires sur des fichiers](https://www.hostinger.fr/tutoriels/chmod-chown-linux/)
     * [Operateurs en Shell (ici la redirection)](https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators)
     * [Guide pour la commande apt-get](https://doc.ubuntu-fr.org/apt-get)
