@@ -28,12 +28,12 @@ mysql -u root < /var/www/html/phpmyadmin/sql/create_tables.sql
 
 ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/
 
-# Modification des droits et du groupe sur le site
+# Modification des droits et du groupe sur les sites
 
 chown -R www-data:www-data /var/www/*
 chmod -R 755 /var/www/*
 
-# Installation de SSL sur localhost (mkcert)
+# Installation de SSL et generation des cles pour localhost (mkcert)
 
 /root/./mkcert-v1.1.2-linux-amd64 -install
 /root/./mkcert-v1.1.2-linux-amd64 localhost
