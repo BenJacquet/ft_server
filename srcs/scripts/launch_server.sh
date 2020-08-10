@@ -23,7 +23,6 @@ cp -r config_files/* /
 
 service mysql start
 mysql -u root < /var/www/html/wordpress/initialize_db.sql
-mysql -u root < /var/www/html/phpmyadmin/sql/create_tables.sql
 
 # Activation du site localhost dans nginx
 
