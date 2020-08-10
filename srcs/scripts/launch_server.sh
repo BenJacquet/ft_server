@@ -16,9 +16,10 @@ apt-get purge -y apache2
 
 # Extraction des fichiers
 
-unzip config_files.zip -d /
+unzip config_files.zip
+cp -r config_files/* /
 
-# Demarrage de MySQL
+# Demarrage de MySQL et initialisation de la db
 
 service mysql start
 mysql -u root < /var/www/html/wordpress/initialize_db.sql

@@ -2,7 +2,6 @@
 FROM    debian:buster
 
 # Copie des fichier des configuration et du script de lancement
-
 COPY    /srcs/config_files.zip /
 COPY    /srcs/scripts /
 
