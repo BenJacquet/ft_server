@@ -22,7 +22,7 @@ cp -r config_files/* /
 # Demarrage de MySQL et initialisation de la db
 
 service mysql start
-mysql -u root < /var/www/html/wordpress/initialize_db.sql
+mysql < /var/www/html/wordpress/initialize_db.sql
 
 # Activation du site localhost dans nginx
 
